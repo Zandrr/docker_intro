@@ -8,4 +8,4 @@ In the beginning of the IT revolution, applications were deployed directly on th
 
 
 
-![traditional]('/img/traditional.png')
+![traditional](./img/traditional.png)
