@@ -20,3 +20,36 @@ To run our image we type the following command:
 This will run docker in interactive mode and allocates a psuedo-tty with a name of "f21" and it will run the ```/bin/bash``` command.
 
 Okay let's build a docker file to serve a node.js app:
+
+
+first we build the Dockerfile:
+
+```
+
+
+
+```
+
+
+Then let's build the simple nodejs app:
+
+
+```javascript
+
+
+var express = require('express'),
+    http = require('http'),
+    app = express(); // Make app using Express framework
+app.set('port', 8000);
+var server = http.createServer(app);
+server.listen(app.get('port'), function() {
+    console.log("Listening on port " + app.get('port'));
+});
+app.get('/', function(req, res) {
+    res.send("Docker is so cool!");
+});
+
+```
+
+
+We can now run ```docker build -t nodejs . ``` to create a new docker image.

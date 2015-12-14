@@ -36,10 +36,15 @@ Containers have been around for a while now, but only recently have they seen mo
 
 ### Docker
 
+Docker was originally created by a dude names Solomon Hykes, and it was released open-source in March 2013 under the Apache license.
+
 According to the Docker website: 
 
 
-> Docker allows you to package an application with all of its dependencies into a standardized unit for software development.
+> "Docker allows you to package an application with all of its dependencies into a standardized unit for software development."
+
+
+With the release of Docker, containers suddenly became first-class citizens.  The founders and developers knew it would be tough to get mainstream adoption, so they created a standard way to use  containers.
 
 
 
