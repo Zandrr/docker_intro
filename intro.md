@@ -1,4 +1,4 @@
-## A Brief History of Virtualization
+# A Brief History of Virtualization
 
 
 ### Hardware Centric Development
@@ -34,7 +34,12 @@ Containers have been around for a while now, but only recently have they seen mo
 
 
 
+### Docker
 
+According to the Docker website: 
+
+
+> Docker allows you to package an application with all of its dependencies into a standardized unit for software development.
 
 
 
