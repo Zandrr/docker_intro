@@ -25,7 +25,20 @@ Okay let's build a docker file to serve a node.js app:
 first we build the Dockerfile:
 
 ```
+FROM fedora
+MAINTAINER "Alex Campbell" <campbellalex11@gmail.com>
 
+RUN yum -y update && yum clean all
+RUN yum -y install npm && yum clean all
+
+
+ADD . /src
+
+RUN cd /src; npm install
+
+EXPOSE 8000
+
+CMD["node", "/src/index.js"]
 
 
 ```
@@ -52,4 +65,6 @@ app.get('/', function(req, res) {
 ```
 
 
-We can now run ```docker build -t nodejs . ``` to create a new docker image.
+We can now run ```docker build -t nodejs . ``` to create a new docker image.  This example can be found in the nodejs folder.
+
+We now have a image inside of a container that is completely modularized. If the server breaks, we can just reload the docker image and be ready to work again.  In addition, developers no longer need to worry about their development environment.  They can just load up the nodejs container and start working.  It will seamlessly work on all computers.
